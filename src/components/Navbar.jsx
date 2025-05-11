@@ -8,7 +8,7 @@ export default function Navbar() {
   // Handle logout
   const handleLogout = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/logout", {
+      const res = await fetch("https://xeno-mini-crm-backend-ml6e.onrender.com/api/auth/logout", {
         method: "GET",
         credentials: "include", // important!
       });

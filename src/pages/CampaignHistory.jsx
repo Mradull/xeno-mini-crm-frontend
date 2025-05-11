@@ -17,7 +17,7 @@ export default function CampaignHistory() {
   // Fetch campaigns
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:5000/api/campaigns")
+    axios.get("https://xeno-mini-crm-backend-ml6e.onrender.com/api/campaigns")
       .then((res) => {
         setCampaigns(res.data);
         setLoading(false);

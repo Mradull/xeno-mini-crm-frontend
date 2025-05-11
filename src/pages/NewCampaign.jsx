@@ -36,7 +36,7 @@ const [isGenerating, setIsGenerating] = useState(false);
   const handleGenerateMessage = async () => {
   setIsGenerating(true);
   try {
-    const res = await fetch("http://localhost:5000/api/ai/message-suggest", {
+    const res = await fetch("https://xeno-mini-crm-backend-ml6e.onrender.com/api/ai/message-suggest", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ goal: "create a promotional message using {name}" }),
@@ -64,7 +64,7 @@ const [isGenerating, setIsGenerating] = useState(false);
   const handleSubmit = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/campaigns/preview", {
+      const response = await fetch("https://xeno-mini-crm-backend-ml6e.onrender.com/api/campaigns/preview", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ rules }),
@@ -93,7 +93,7 @@ const [isGenerating, setIsGenerating] = useState(false);
 
     setIsSending(true);
     try {
-      const response = await fetch("http://localhost:5000/api/campaigns/send", {
+      const response = await fetch("https://xeno-mini-crm-backend-ml6e.onrender.com/api/campaigns/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, message, rules }),
