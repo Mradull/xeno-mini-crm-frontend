@@ -1,0 +1,345 @@
+/* src/pages/NewCampaign.css - Light Theme */
+
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #eef2ff;
+  --text-dark: #1f2937;
+  --text-medium: #6b7280;
+  --text-light: #9ca3af;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --border-color: #e5e7eb;
+  --border-hover: #d1d5db;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius-sm: 0.375rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+.campaign-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: var(--bg-light);
+}
+
+.campaign-container {
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.campaign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dark);
+}
+
+.header-content p {
+  font-size: 1rem;
+  color: var(--text-medium);
+  margin: 0;
+}
+
+.filter-icon {
+  background-color: var(--primary-light);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.rule-item:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.rule-number {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 600;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+.rule-controls {
+  display: flex;
+  flex: 1;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Logic Operator Section */
+.logic-operator {
+  text-align: center;
+  margin: 1rem 0 -0.5rem 0;
+}
+
+.logic-select {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logic-select:hover,
+.logic-select:focus {
+  background-color: var(--bg-white);
+  border-color: var(--primary-hover);
+  outline: none;
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.preview-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-list {
+  margin-top: 20px;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.user-list li p {
+color: #000;
+  margin: 0;
+}
+
+
+
+@media (min-width: 640px) {
+  .rule-controls {
+    flex-wrap: nowrap;
+  }
+}
+
+.field-select,
+.operator-select,
+.value-input {
+  padding: 0.625rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.field-select:focus,
+.operator-select:focus,
+.value-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.field-select,
+.value-input-container {
+  flex: 1;
+}
+
+.operator-select {
+  width: 170px;
+}
+
+.value-input-container {
+  position: relative;
+}
+
+.value-input {
+  width: 90%;
+}
+
+.remove-rule-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 1.125rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.remove-rule-btn:hover {
+  color: #ef4444;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .action-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.add-rule-btn,
+.preview-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.add-rule-btn {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.add-rule-btn:hover {
+  background-color: var(--bg-light);
+  border-color: var(--border-hover);
+}
+
+.preview-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+}
+
+.preview-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.preview-btn:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
+
+.plus-icon {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.arrow-icon {
+  font-weight: bold;
+}
+
+.preview-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.preview-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.preview-data {
+  background-color: var(--primary-light);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.audience-size {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.audience-label {
+  color: var(--text-medium);
+  margin: 0;
+}
